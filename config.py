@@ -15,7 +15,7 @@ def load_config():
 
     config_str = read_file(config_path)
     # 将json字符串反序列化为dict类型
-    config = json.loads(config_str)
+    config = json.load(config_str, strict=False)
     logger.info("[INIT] load config: {}".format(config))
 
 
@@ -26,7 +26,7 @@ def get_root():
 
 def read_file(path):
     with open(path, mode='r', encoding='utf-8', errors='ignore') as f:
-        return f.read()
+        return f
 
 
 def conf():
