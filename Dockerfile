@@ -12,6 +12,8 @@ RUN apk add --no-cache \
         bash \
         curl \
         wget \
+        ffmpeg \
+        espeak \
     && export BUILD_GITHUB_TAG=${CHATGPT_ON_WECHAT_VER:-`curl -sL "https://api.github.com/repos/zhayujie/chatgpt-on-wechat/releases/latest" | \
         grep '"tag_name":' | \
         sed -E 's/.*"([^"]+)".*/\1/'`} \
