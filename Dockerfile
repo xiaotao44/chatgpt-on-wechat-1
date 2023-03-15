@@ -8,7 +8,8 @@ ARG CHATGPT_ON_WECHAT_VER
 ENV BUILD_PREFIX=/app \
     BUILD_OPEN_AI_API_KEY='YOUR OPEN AI KEY HERE'
 
-RUN apk add --no-cache \
+RUN pip3 install SpeechRecognition \
+    && apk add --no-cache \
         bash \
         curl \
         wget \
